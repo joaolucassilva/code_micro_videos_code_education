@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Api;
 
 use App\Models\Category;
+use App\Http\Requests\Category\{
+    CategoryUpdateRequest,
+    CategoryStoreRequest
+};
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Category\CategoryUpdateRequest;
-use App\Http\Requests\Category\CategoryStoreRequest;
 
 class CategoryController extends Controller
 {
