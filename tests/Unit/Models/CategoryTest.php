@@ -4,14 +4,11 @@ namespace Tests\Unit\Models;
 
 use App\Models\Category;
 use App\Models\Traits\Uuid;
-use PHPUnit\Framework\TestCase;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
+use PHPUnit\Framework\TestCase;
 
 class CategoryTest extends TestCase
 {
-    use DatabaseMigrations;
-
     private $model;
 
     protected function setUp(): void

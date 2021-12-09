@@ -5,13 +5,10 @@ namespace Tests\Unit\Models;
 use App\Models\Genre;
 use App\Models\Traits\Uuid;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
 
 class GenreTest extends TestCase
 {
-    use DatabaseMigrations;
-
     private $model;
 
     protected function setUp(): void
