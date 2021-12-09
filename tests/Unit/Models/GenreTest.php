@@ -55,7 +55,7 @@ class GenreTest extends TestCase
 
     public function testCasts()
     {
-        $casts = ['id' => 'string'];
+        $casts = ['id' => 'string', 'is_active' => 'boolean'];
 
         $this->assertEquals($casts, $this->model->getCasts());
     }
