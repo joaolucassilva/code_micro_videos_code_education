@@ -48,4 +48,20 @@ class GenreTest extends TestCase
         $genre = $this->model->create(['name' => 'genre_teste_1', 'is_active' => true]);
         $this->assertTrue($genre->is_active);
     }
+
+    public function testUpdate()
+    {
+        $genre = factory(Genre::class)->create(['is_active' => false]);
+
+        $data = [
+            'name' => 'test_name_updated',
+            'is_active' => true
+        ];
+
+        $genre->update($data);
+
+        foreach ($data as $key => $value) {
+            $this->assertEquals($value, $genre->{$key});
+        }
+    }
 }
