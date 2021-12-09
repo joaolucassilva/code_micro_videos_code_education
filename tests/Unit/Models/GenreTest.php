@@ -16,8 +16,8 @@ class GenreTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->model = new Genre();
         parent::setUp();
+        $this->model = new Genre();
     }
 
     public function testFillableAttribute()

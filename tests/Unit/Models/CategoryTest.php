@@ -16,8 +16,8 @@ class CategoryTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->model = new Category();
         parent::setUp();
+        $this->model = new Category();
     }
 
     public function testFillableAttribute()
