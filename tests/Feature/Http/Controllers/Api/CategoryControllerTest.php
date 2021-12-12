@@ -180,4 +180,19 @@ class CategoryControllerTest extends TestCase
             'description' => null
         ]);
     }
+
+    public function testDestroy()
+    {
+        $category = factory(Category::class)->create();
+
+        $response = $this->json(
+            'DELETE',
+            route('categories.destroy', ['category' => $category->id]),
+        );
+
+        $response->assertStatus(204);
+
+        $categoryExist = $this->model->find($category->id);
+        $this->assertNull($categoryExist);
+    }
 }
