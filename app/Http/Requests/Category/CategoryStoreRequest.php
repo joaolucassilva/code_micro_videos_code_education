@@ -15,8 +15,8 @@ class CategoryStoreRequest extends FormRequest
     {
         return [
             'name' => 'required|max:255',
-            'descript' => 'nullable',
-            'is_active' => 'nullable|boolean'
+            'description' => 'nullable',
+            'is_active' => 'boolean'
         ];
     }
 }
