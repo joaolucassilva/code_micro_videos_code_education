@@ -159,5 +159,6 @@ class GenreControllerTest extends TestCase
 
         $genreExist = $this->model->find($genre->id);
         $this->assertNull($genreExist);
+        $this->assertNotNull($this->model->withTrashed()->find($genre->id));
     }
 }

@@ -194,5 +194,6 @@ class CategoryControllerTest extends TestCase
 
         $categoryExist = $this->model->find($category->id);
         $this->assertNull($categoryExist);
+        $this->assertNotNull($this->model->withTrashed()->find($category->id));
     }
 }
