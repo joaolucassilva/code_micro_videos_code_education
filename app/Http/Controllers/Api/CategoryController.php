@@ -8,6 +8,7 @@ use App\Http\Requests\Category\{
     CategoryStoreRequest
 };
 use App\Models\Category;
+use Illuminate\Http\Response;
 
 class CategoryController extends Controller
 {
@@ -35,9 +36,10 @@ class CategoryController extends Controller
         return $category;
     }
 
-    public function destroy(Category $category)
+    public function destroy(Category $category): Response
     {
         $category->delete();
+
         return response()->noContent();
     }
 }
